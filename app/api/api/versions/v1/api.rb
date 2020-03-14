@@ -7,6 +7,12 @@ module Versions
       prefix :api
 
       include ::Versions::V1::TaskDisplays
+      include ::Versions::V1::TestUser
+
+      GrapeDeviseTokenAuth.setup! do |config|
+        config.authenticate_all = true
+      end
+
 
       # :nocov:
       if Rails.env.development?

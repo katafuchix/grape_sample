@@ -56,3 +56,7 @@ gem 'grape_on_rails_routes'
 gem 'swagger-ui_rails'
 gem 'grape-swagger'
 gem 'grape-swagger-rails'
+
+gem 'devise'
+gem 'devise_token_auth'
+gem 'grape_devise_token_auth'
