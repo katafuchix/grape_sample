@@ -1,0 +1,7 @@
+ja:
+  api:
+    success_message:
+      get: 取得しました
+      create: 作成しました
+      update: 更新しました
+      delete: 削除しました
