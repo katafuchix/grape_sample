@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ユーザー作成
 
-Things you may want to cover:
+```
+#  curl --request POST  --url http://localhost:3000/api/v1/auth  --header 'content-type: application/x-www-form-urlencoded'  --data email=EMAIL --data password=PASSWORD  --data password_confirmation=PASSWORD
+```
 
-* Ruby version
+認証必須のAPIテスト
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+# curl --request GET  --url http://localhost:3000/api/v1/test/user  --header 'access-token: xxxx' --header 'client: xxxx' --header 'uid: your mailaddress'
+```
