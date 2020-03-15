@@ -6,6 +6,10 @@ module Versions
       formatter :json, Grape::Formatter::Jbuilder
       prefix :api
 
+      # エラー対応
+      rescue_from :all, backtrace: true
+      error_formatter :json, ::MediaSite::ErrorFormatter
+      
       include ::Versions::V1::TaskDisplays
       include ::Versions::V1::TestUser
 

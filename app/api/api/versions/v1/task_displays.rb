@@ -9,6 +9,16 @@ module Versions
             get '', jbuilder: 'v1/task_displays/index' do
               @tasks = Task.all
             end
+
+            desc "個別タスクの取得"
+            params do
+              requires :id, type: Integer
+            end
+            # http://localhost:3000/api/1/task_displays/{:id}
+            get ':id', jbuilder: 'v1/task_displays/detail' do
+              @task = Task.find(params[:id])
+            end
+            
           end
         end
       end
